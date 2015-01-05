@@ -599,11 +599,11 @@
 }
 
 #pragma mark - RCIMUserInfoFetcherDelegagte method
--(RCUserInfo *)getUserInfoWithUserId:(NSString *)userId
+-(void)getUserInfoWithUserId:(NSString *)userId completion:(void(^)(RCUserInfo* userInfo))completion
 {
     RCUserInfo *user  = nil;
     if([userId length] == 0)
-        return nil;
+        return completion(nil);
     for(RCUserInfo *u in self.allFriendsArray)
     {
         if([u.userId isEqualToString:userId])
@@ -612,7 +612,7 @@
             break;
         }
     }
-    return user;
+    return completion(user);
 }
 
 @end
