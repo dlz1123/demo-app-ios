@@ -10,6 +10,7 @@
 		5115E44F1A23A18A00ABB7EF /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5115E44E1A23A18A00ABB7EF /* RongCloud.bundle */; };
 		5115E4511A23A26000ABB7EF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5115E4501A23A26000ABB7EF /* MapKit.framework */; };
 		5115E4531A23A26D00ABB7EF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5115E4521A23A26D00ABB7EF /* CoreLocation.framework */; };
+		5128E75C1A5AB43F00067609 /* libiOS_IMKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5128E75B1A5AB43F00067609 /* libiOS_IMKit.a */; };
 		5160E0DC19B494F700983874 /* DemoChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5160E0D719B494F700983874 /* DemoChatListViewController.m */; };
 		5160E0DD19B494F700983874 /* DemoChatsettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5160E0D919B494F700983874 /* DemoChatsettingViewController.m */; };
 		5160E0DE19B494F700983874 /* DemoChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5160E0DB19B494F700983874 /* DemoChatViewController.m */; };
@@ -49,7 +50,6 @@
 		B2FF115F196152380058A1F1 /* RCHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FF1157196152380058A1F1 /* RCHttpRequest.m */; };
 		E48961191A012C5F00614422 /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E48961161A012C5F00614422 /* SigninViewController.m */; };
 		E489611A1A012C5F00614422 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E48961181A012C5F00614422 /* SignupViewController.m */; };
-		E4CFCB051A10676700721C22 /* iOS_IMKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CFCB041A10676700721C22 /* iOS_IMKit.a */; };
 		E4CFCB061A1067E600721C22 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23176981990B04900A10B65 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +57,7 @@
 		5115E44E1A23A18A00ABB7EF /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
 		5115E4501A23A26000ABB7EF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5115E4521A23A26D00ABB7EF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5128E75B1A5AB43F00067609 /* libiOS_IMKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiOS_IMKit.a; path = "iOS-IMKit-demo/Libs/libiOS_IMKit.a"; sourceTree = "<group>"; };
 		5160E0D619B494F700983874 /* DemoChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoChatListViewController.h; sourceTree = "<group>"; };
 		5160E0D719B494F700983874 /* DemoChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoChatListViewController.m; sourceTree = "<group>"; };
 		5160E0D819B494F700983874 /* DemoChatsettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoChatsettingViewController.h; sourceTree = "<group>"; };
@@ -128,7 +129,6 @@
 		E48961161A012C5F00614422 /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
 		E48961171A012C5F00614422 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		E48961181A012C5F00614422 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
-		E4CFCB041A10676700721C22 /* iOS_IMKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = iOS_IMKit.a; path = "iOS-IMKit-demo/Libs/iOS_IMKit.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,6 @@
 				5115E4531A23A26D00ABB7EF /* CoreLocation.framework in Frameworks */,
 				5115E4511A23A26000ABB7EF /* MapKit.framework in Frameworks */,
 				E4CFCB061A1067E600721C22 /* CoreMedia.framework in Frameworks */,
-				E4CFCB051A10676700721C22 /* iOS_IMKit.a in Frameworks */,
 				51C2B3D719D979AB003FD466 /* libz.dylib in Frameworks */,
 				51C2B3D419D97993003FD466 /* CoreTelephony.framework in Frameworks */,
 				B20391E4195A716500A2019F /* SystemConfiguration.framework in Frameworks */,
@@ -149,6 +148,7 @@
 				B225036819330B1D00D5E003 /* QuartzCore.framework in Frameworks */,
 				B231769C1990B04900A10B65 /* CoreVideo.framework in Frameworks */,
 				B231769D1990B04900A10B65 /* CFNetwork.framework in Frameworks */,
+				5128E75C1A5AB43F00067609 /* libiOS_IMKit.a in Frameworks */,
 				51C2B3D219D97974003FD466 /* libNBSAppAgent.framework in Frameworks */,
 				B267DF8B1932E23900B5FFC3 /* UIKit.framework in Frameworks */,
 				B267DF8D1932E23900B5FFC3 /* Foundation.framework in Frameworks */,
@@ -196,9 +196,9 @@
 		B267DF891932E23900B5FFC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5128E75B1A5AB43F00067609 /* libiOS_IMKit.a */,
 				5115E4521A23A26D00ABB7EF /* CoreLocation.framework */,
 				5115E4501A23A26000ABB7EF /* MapKit.framework */,
-				E4CFCB041A10676700721C22 /* iOS_IMKit.a */,
 				51C2B3D519D9799D003FD466 /* Security.framework */,
 				51C2B3D319D97993003FD466 /* CoreTelephony.framework */,
 				51C2B3D119D97974003FD466 /* libNBSAppAgent.framework */,
@@ -537,7 +537,10 @@
 				);
 				INFOPLIST_FILE = "iOS-IMKit-demo/RongIMKit-Demo-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/iOS-IMKit-demo/Libs/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/iOS-IMKit-demo/Libs/**",
+					"$(PROJECT_DIR)/iOS-IMKit-demo/Libs",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "RongIMKit-Demo-iOS";
@@ -565,7 +568,10 @@
 				);
 				INFOPLIST_FILE = "iOS-IMKit-demo/RongIMKit-Demo-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/iOS-IMKit-demo/Libs/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/iOS-IMKit-demo/Libs/**",
+					"$(PROJECT_DIR)/iOS-IMKit-demo/Libs",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "RongIMKit-Demo-iOS";

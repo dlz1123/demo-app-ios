@@ -444,11 +444,11 @@
 }
 
 #pragma mark - RCIMGroupInfoFetcherDelegate method
--(RCGroup*)getGroupInfoWithGroupId:(NSString*)groupId
+-(void)getGroupInfoWithGroupId:(NSString*)groupId completion:(void (^)(RCGroup *group))completion
 {
     RCGroup *group  = nil;
     if([groupId length] == 0)
-        return nil;
+        return completion(nil);
     for(RCGroup *__g in self.groupList)
     {
         if([__g.groupId isEqualToString:groupId])
@@ -457,6 +457,6 @@
             break;
         }
     }
-    return group;
+    return completion(group);
 }
 @end
