@@ -141,7 +141,7 @@
     } error:^(RCErrorCode status) {
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            DebugLog(@"DISCUSSION_INVITE_FAILED %d",status);
+            DebugLog(@"DISCUSSION_INVITE_FAILED %d",(int)status);
             UIAlertView *alert= [[UIAlertView alloc]initWithTitle:@"" message:@"创建讨论组失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
             [alert show];
         });

@@ -87,6 +87,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
     title.font = [UIFont systemFontOfSize:18];
     title.backgroundColor = [UIColor clearColor];
@@ -329,18 +332,14 @@
     NSString* userEmail = [(UITextField *)[self.view viewWithTag:Tag_EmailTextField] text];
     NSString* userPSWord= [(UITextField *)[self.view viewWithTag:Tag_TempPasswordTextField] text];
     NSString* strParams = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@",@"email",userEmail,@"password",userPSWord, @"username",userName];
-    [[RCHttpRequest defaultHttpRequest] httpConnectionWithURL:[NSString stringWithFormat:@"%@reg",FAKE_SERVER] bodyData:[strParams dataUsingEncoding:NSUTF8StringEncoding] delegate:self];
+    [[RCHttpRequest defaultHttpRequest] httpConnectionWithURL:[NSString stringWithFormat:@"%@reg",[self getFakeServer]] bodyData:[strParams dataUsingEncoding:NSUTF8StringEncoding] delegate:self];
 }
-
 
 #pragma mark - HttpConnectionDelegate
 - (void)responseHttpConnectionSuccess:(RCHttpRequest *)request
 {
     if(request.response.statusCode == 200)
     {
-        NSError* error = nil;
-        NSDictionary * regDataDict = [NSJSONSerialization JSONObjectWithData:request.responseData options:kNilOptions error:&error];
-        DebugLog(@"TTT %@",regDataDict);
         [MMProgressHUD dismissWithSuccess:@"注册成功！"];
         [self cancelSignup];
     }
@@ -359,4 +358,16 @@
     [self alertTitle:@"提示" message:@"网络原因，注册帐号失败" delegate:nil cancelBtn:@"确定" otherBtnName:nil];
 }
 
+-(NSString*)getFakeServer
+{
+    NSString *pAppKeyPath = [[NSBundle mainBundle] pathForResource:RC_APPKEY_CONFIGFILE ofType:@""];//[documentsDir stringByAppendingPathComponent:RC_APPKEY_CONFIGFILE];
+    NSError *error;
+    NSString *valueOfKey = [NSString stringWithContentsOfFile:pAppKeyPath encoding:NSUTF8StringEncoding error:&error];
+    NSString* fServer;
+    if([valueOfKey intValue] == 0)  //开发环境：0 生产环境：1
+        fServer = DEV_FAKE_SERVER;
+    else
+        fServer = PRO_FAKE_SERVER;
+    return fServer;
+}
 @end

@@ -1,9 +1,9 @@
 //
 //  RCHttpRequest.m
-//  iOS-IMLib
+//  RongIM
 //
 //  Created by Heq.Shinoda on 14-6-9.
-//  Copyright (c) 2014年 RongCloud. All rights reserved.
+//  Copyright (c) 2014年 Heq.Shinoda. All rights reserved.
 //
 
 #import "RCHttpRequest.h"
@@ -25,7 +25,7 @@ static RCHttpRequest *pDefaultRequest = nil;
     return pDefaultRequest;
 }
 
--(id)init{
+-(instancetype)init{
     self = [super init];
     if (self) {
         
@@ -35,7 +35,7 @@ static RCHttpRequest *pDefaultRequest = nil;
 //----Http comunication----//
 -(void)httpConnectionWithURL:(NSString*)strURL bodyData:(NSData*)data delegate:(id<HttpConnectionDelegate>)delegate
 {
-    NSLog(@"http url ==> %@",strURL);
+    DebugLog(@"http url ==> %@",strURL);
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strURL]
 																cachePolicy:NSURLRequestReturnCacheDataElseLoad
 															timeoutInterval:12.0];
@@ -55,7 +55,7 @@ static RCHttpRequest *pDefaultRequest = nil;
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
 	//if(connection != self.connection) return;
 	self.response = (NSHTTPURLResponse*)response;
-    NSLog(@"response.statusCode ==> %d",self.response.statusCode);
+    DebugLog(@"response.statusCode ==> %d",self.response.statusCode);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -67,7 +67,7 @@ static RCHttpRequest *pDefaultRequest = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    NSLog(@"request  didFailWithError %@",error);
+    DebugLog(@"request  didFailWithError %@",error);
 	//if(connection != self.connection) return;
     
 	if([self.httpDelegate respondsToSelector:@selector(responseHttpConnectionFailed:didFailWithError:)])

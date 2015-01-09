@@ -11,13 +11,13 @@
 
 @implementation UserDataModel
 @synthesize userId, username, usernamePinyin, portraitPath;
--(id)init
+-(instancetype)init
 {
     self = [super init];
     return self;
 }
 
--(id)initWithUserData:(NSString*)aUID userName:(NSString*)aUName userNamePY:(NSString*)aUNPY portrait:(NSString*)aPortrait user_Email:(NSString*)aUserEmail
+-(instancetype)initWithUserData:(NSString*)aUID userName:(NSString*)aUName userNamePY:(NSString*)aUNPY portrait:(NSString*)aPortrait user_Email:(NSString*)aUserEmail
 
 {
     self = [super init];

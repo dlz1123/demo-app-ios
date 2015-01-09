@@ -12,28 +12,33 @@
 #import "DemoCommonConfig.h"
 #import  <libNBSAppAgent/NBSAppAgent.h>
 
-#define RONGCLOUD_IM_APPKEY    @"z3v5yqkbv8v30" //这个AppKey值RongCloud实例。
+//使用DEMO注意：更换appkey，一定要更换对应的连接token，如果token未做变化，默认会从融云测试环境获取，照成appkey和token不一致
+#define RONGCLOUD_IM_APPKEY    @"e0x9wycfx7flq"
+//使用DEMO注意：更换appkey，一定要更换对应的连接token，如果token未做变化，默认会从融云测试环境获取，照成appkey和token不一致
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
     //注册听云
-    
     [NBSAppAgent  startWithAppID:@"a546c342ba704acf91b27e9603b6860d"];
-    
-    [RCIM initWithAppKey:RONGCLOUD_IM_APPKEY deviceToken:nil];
-    
+    NSString* appKey = [self readAppKeyFromConfig];
+    [RCIM initWithAppKey:appKey deviceToken:nil];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // 创建登录页面
+    // Override point for customization after application launch.
     SigninViewController* loginVC = [[SigninViewController alloc] init];
+    
+    //注册百度地图
+    self.mapManager = [[BMKMapManager alloc] init];
+    BOOL ret = [self.mapManager start:@"1GNhg2fYLdCKfjcOtnADRMa1" generalDelegate:self];
+    if (!ret) {
+        DebugLog(@"百度地图启动失败");
+    }
 
     [loginVC.view setFrame:self.window.frame];
 
     UINavigationController *rootNavi = [[UINavigationController alloc] initWithRootViewController:loginVC];
 
-    //rootNavi.navigationBar.translucent = NO;
     [rootNavi.navigationBar setBackgroundImage:[self createImageWithColor:RGBCOLOR(43, 132, 210)] forBarMetrics:UIBarMetricsDefault];
     self.window.rootViewController = rootNavi;
 
@@ -50,11 +55,9 @@
         UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
         [application registerForRemoteNotificationTypes:myTypes];
     }
-    
-    [[RCIM sharedRCIM]setReceiveMessageDelegate:self];
-    
     return YES;
 }
+
 
 //#ifdef __IPHONE_8_0
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
@@ -73,16 +76,7 @@
 }
 //#endif
 
--(void)didReceivedMessage:(RCMessage *)message left:(int)nLeft
-{
-    if (0 == nLeft) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [UIApplication sharedApplication].applicationIconBadgeNumber = [UIApplication sharedApplication].applicationIconBadgeNumber+1;
-        });
-    }
-    
-    
-}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -115,19 +109,35 @@
 }
 
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-    NSLog(@"error:%@",error);
-    //[RCIM initWithAppKey:RONGCLOUD_IM_APPKEY deviceToken:nil];
+    DebugLog(@"error:%@",error);
+    
+    
 }
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     
-    NSLog(@"RemoteNote userInfo:%@",userInfo);
-    NSLog(@" 收到推送消息： %@",[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]);
+    DebugLog(@"RemoteNote userInfo:%@",userInfo);
+    DebugLog(@" 收到推送消息： %@",userInfo[@"aps"][@"alert"]);
 }
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-    NSLog(@"deviceToken:%@",deviceToken);
+
+    DebugLog(@"deviceToken:%@",deviceToken);
     [[RCIM sharedRCIM]setDeviceToken:deviceToken];
+//    if (deviceToken) {
+//        NSString* token = [[[[deviceToken description]
+//                   stringByReplacingOccurrencesOfString:@"<" withString:@""]
+//                  stringByReplacingOccurrencesOfString:@">" withString:@""]
+//                 stringByReplacingOccurrencesOfString:@" " withString:@""];
+//        
+//        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"测试获取token" message:token delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+//        [alertView show];
+//    }else
+//    {
+//        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"测试获取token" message:@"fail"delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+//        [alertView show];
+//    }
+    
 }
 
 -(UIImage *)createImageWithColor:(UIColor *)color
@@ -143,4 +153,28 @@
     return theImage;
 }
 
+-(NSString*)readAppKeyFromConfig
+{
+//    return RONGCLOUD_IM_APPKEY;
+    
+    NSString *pAppKeyPath = [[NSBundle mainBundle] pathForResource:RC_APPKEY_CONFIGFILE ofType:@""];//[documentsDir stringByAppendingPathComponent:RC_APPKEY_CONFIGFILE];
+    NSError *error;
+    NSString *valueOfKey = [NSString stringWithContentsOfFile:pAppKeyPath encoding:NSUTF8StringEncoding error:&error];
+    NSString* appKey;
+    if([valueOfKey intValue] == 0)  //开发环境：0 生产环境：1
+        appKey = RONGCLOUD_IM_APPKEY;//@"uwd1c0sxdlx91";
+    else
+        appKey = @"z3v5yqkbv8v30";//@"8luwapkvuxvel";
+    return appKey;
+}
+
+#pragma mark -
+#pragma mark BMKGeneralDelegate
+- (void)onGetNetworkState:(int)iError {
+    DebugLog(@"百度地图：网络状态 %i", iError);
+}
+
+- (void)onGetPermissionState:(int)iError {
+    DebugLog(@"百度地图：授权状态 %i", iError);
+}
 @end

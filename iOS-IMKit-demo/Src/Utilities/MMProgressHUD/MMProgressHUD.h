@@ -11,7 +11,7 @@
 
 #ifdef DEBUG
     #ifdef MM_HUD_DEBUG
-        #define MMHudLog(fmt, ...) NSLog((@"%@ [line %u]: " fmt), NSStringFromClass(self.class), __LINE__, ##__VA_ARGS__)
+        #define MMHudLog(fmt, ...) DebugLog((@"%@ [line %u]: " fmt), NSStringFromClass(self.class), __LINE__, ##__VA_ARGS__)
     #else
         #define MMHudLog(...) /* */
     #endif
@@ -19,7 +19,7 @@
     #define MMHudLog(...) /* */
 #endif
 
-#define MMHudWLog(fmt, ...) NSLog((@"%@ WARNING [line %u]: " fmt), NSStringFromClass(self.class), __LINE__, ##__VA_ARGS__)
+#define MMHudWLog(fmt, ...) DebugLog((@"%@ WARNING [line %u]: " fmt), NSStringFromClass(self.class), __LINE__, ##__VA_ARGS__)
 
 extern NSString * const MMProgressHUDDefaultConfirmationMessage;
 
@@ -28,8 +28,8 @@ extern NSString * const MMProgressHUDAnimationDismiss;
 extern NSString * const MMProgressHUDAnimationWindowFadeOut;
 extern NSString * const MMProgressHUDAnimationKeyShowAnimation;
 extern NSString * const MMProgressHUDAnimationKeyDismissAnimation;
-extern CGFloat const MMProgressHUDStandardDismissDelay;
 
+extern CGFloat const MMProgressHUDStandardDismissDelay;
 
 @class MMProgressHUDWindow;
 @class MMProgressHUDOverlayView;
