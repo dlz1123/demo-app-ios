@@ -11,4 +11,5 @@
 @interface UserInfoViewController : UIViewController
 
 @property (nonatomic,strong) UILabel *nameLabel;
+@property (nonatomic,strong) NSString *targetId;
 @end

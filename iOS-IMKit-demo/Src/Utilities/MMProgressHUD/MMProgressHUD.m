@@ -27,9 +27,12 @@ NSString * const MMProgressHUDAnimationDismiss = @"mm-progress-hud-dismiss-anima
 NSString * const MMProgressHUDAnimationWindowFadeOut = @"mm-progress-hud-window-fade-out";
 NSString * const MMProgressHUDAnimationKeyShowAnimation = @"show";
 NSString * const MMProgressHUDAnimationKeyDismissAnimation = @"dismiss";
+
 NSUInteger const MMProgressHUDConfirmationPulseCount = 8;//Keep this number even
-CGFloat    const MMProgressHUDStandardDismissDelay = 0.75f;
-CGSize     const MMProgressHUDDefaultImageSize = {37.f, 37.f};
+
+CGFloat const MMProgressHUDStandardDismissDelay = 0.75f;
+
+CGSize const MMProgressHUDDefaultImageSize = {37.f, 37.f};
 
 #pragma mark - MMProgressHUD
 @interface MMProgressHUD () <MMHudDelegate>
@@ -75,7 +78,7 @@ CGSize     const MMProgressHUDDefaultImageSize = {37.f, 37.f};
                images:(NSArray *)images;
 
 //----Animation associalized---- Added by Hequn---<Begin>--2014.6.12--//
-- (CAAnimationGroup *)_glowAnimation;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) CAAnimationGroup *_glowAnimation;
 - (void)_beginGlowAnimation;
 - (void)_endGlowAnimation;
 - (void)_dismissWithDropAnimation;

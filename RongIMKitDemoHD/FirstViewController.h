@@ -1,0 +1,15 @@
+//
+//  FirstViewController.h
+//  RongIMKitDemoHD
+//
+//  Created by Gang Li on 11/5/14.
+//  Copyright (c) 2014 RongCloud. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface FirstViewController : UIViewController
+
+
+@end
+

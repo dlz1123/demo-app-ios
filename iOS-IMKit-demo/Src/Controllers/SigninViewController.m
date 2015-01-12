@@ -19,6 +19,8 @@
 #import "DemoCommonConfig.h"
 #import "HomeViewController.h"
 
+#import "AppDelegate.h"
+
 #define HEXCOLOR(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #define NAVI_BAR_HEIGHT 44.0f
@@ -298,21 +300,20 @@
     NSString* userEmail = [(UITextField *)[self.view viewWithTag:Tag_EmailTextField] text];
     NSString* userPSWord= [(UITextField *)[self.view viewWithTag:Tag_TempPasswordTextField] text];
     NSString* deviceToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"DeviceToken"];
-    //----登录server----//
-    NSString* strParams = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@",@"email",userEmail,@"password",userPSWord, @"deviceid",(deviceToken==nil?@"":deviceToken)];
-    
+    NSString* strParams = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@",@"email",userEmail,@"password",userPSWord, @"deviceid",(deviceToken==nil?@"000000":deviceToken)];
+
     self.loginRequest = [[RCHttpRequest alloc]init];
     self.loginRequest.tag = 1000;
     
-    [self.loginRequest httpConnectionWithURL:[NSString stringWithFormat:@"%@login",FAKE_SERVER]
-                                    bodyData:[strParams dataUsingEncoding:NSUTF8StringEncoding]
-                                    delegate:self];
-    
+    [self.loginRequest httpConnectionWithURL:[NSString stringWithFormat:@"%@login",[self getFakeServer]] bodyData:[strParams dataUsingEncoding:NSUTF8StringEncoding] delegate:self];
+
     [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleShrink];
-    [MMProgressHUD showWithTitle:@"正在登录" status:@"……" cancelBlock:nil];
+    [MMProgressHUD showWithTitle:@"正在登录" status:@"……" cancelBlock:^
+     {
+         //[weakHttpRequest cancelHttpRequest];
+     }];
+
 }
-
-
 #pragma mark - RegisterBtnClicked Method
 - (void)prepareForSignup:(id)sender {
     [self invalidateFirstResponders];
@@ -462,6 +463,9 @@
             NSDictionary * regDataDict = [NSJSONSerialization JSONObjectWithData:request.responseData options:kNilOptions error:&error];
             
             NSString* token = regDataDict[@"token"];
+            
+            NSLog(@"获取融云sdk token =%@",token);
+            
             loginToken = token;
             
             UserDataModel* curUser = [[UserDataModel alloc] initWithUserData:[NSString stringWithFormat:@"%d",[regDataDict[KUserDataModel_Key_UserID] intValue]] userName:regDataDict[KUserDataModel_Key_UserName] userNamePY:@"" portrait:@"" user_Email:regDataDict[KUserDataModel_Key_UserEmail]];
@@ -474,10 +478,11 @@
         }
         else
         {
+            NSLog(@"获取融云sdk token 失败");
             [MMProgressHUD dismiss];
             DebugLog(@"Connection Result:%@",request.response);
             [self alertTitle:@"提示"
-                     message:[NSString stringWithFormat:@"帐号或密码错误，无法登录 : %d",(int)request.response.statusCode ]
+                     message:@"您的登录帐号不存在，请注册"
                     delegate:nil
                    cancelBtn:@"确定"
                 otherBtnName:nil];
@@ -509,21 +514,33 @@
                 [self.allFriendsArray addObject:userInfo];
             }
             
+            [(AppDelegate*)[UIApplication sharedApplication].delegate  setFriendList:self.allFriendsArray];
             //----为刘备or吕蒙不同环境预留。----//
             typeof(self) __weak weakSelf = self;
             
             //使用DEMO注意：更换appkey，一定要更换对应的连接token，如果token未做变化，默认会从融云测试环境获取，照成appkey和token不一致
             [RCIM connectWithToken:loginToken completion:^(NSString *userId) {
+                
+                
+                
                 [MMProgressHUD dismissWithSuccess:@"登录成功!"];
+                
+                
                 HomeViewController *temp = [[HomeViewController alloc]init];
-                temp.currentUserId = userId;
+                temp.currentUserId=userId;
+                
                 [weakSelf.navigationController pushViewController:temp animated:YES];
             } error:^(RCConnectErrorCode status) {
                 if(status == 0)
                 {
                     [MMProgressHUD dismissWithSuccess:@"登录成功!"];
+                    
+                    
                     HomeViewController *temp = [[HomeViewController alloc]init];
+                    
                     [weakSelf.navigationController pushViewController:temp animated:YES];
+                    
+                    
                 }
                 else
                 {
@@ -554,10 +571,9 @@
 -(void)requestFriendsList
 {
     //获取好友列表
-    NSString *url = [NSString stringWithFormat:@"%@%@",FAKE_SERVER,@"friends"];
-    
+    NSString *url = [NSString stringWithFormat:@"%@%@",[self getFakeServer],@"friends"];
     NSString* strParams = [NSString stringWithFormat:@"cookie=%@",[UserManager shareMainUser].mainUser.userEmail];
-    NSLog(@"http reuqest body %@",strParams);
+    DebugLog(@"http reuqest body %@",strParams);
     self.friendRquest = [[RCHttpRequest alloc]init];
     self.friendRquest.tag = 1001;
     [self.friendRquest httpConnectionWithURL:url bodyData:[strParams dataUsingEncoding:NSUTF8StringEncoding] delegate:self];
@@ -615,4 +631,16 @@
     return completion(user);
 }
 
+-(NSString*)getFakeServer
+{
+    NSString *pAppKeyPath = [[NSBundle mainBundle] pathForResource:RC_APPKEY_CONFIGFILE ofType:@""];//[documentsDir stringByAppendingPathComponent:RC_APPKEY_CONFIGFILE];
+    NSError *error;
+    NSString *valueOfKey = [NSString stringWithContentsOfFile:pAppKeyPath encoding:NSUTF8StringEncoding error:&error];
+    NSString* fServer;
+    if([valueOfKey intValue] == 0)  //开发环境：0 生产环境：1
+        fServer = DEV_FAKE_SERVER;
+    else
+        fServer = PRO_FAKE_SERVER;
+    return fServer;
+}
 @end

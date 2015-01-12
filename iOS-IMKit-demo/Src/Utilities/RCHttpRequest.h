@@ -1,9 +1,9 @@
 //
 //  RCHttpRequest.h
-//  iOS-IMLib
+//  RongIM
 //
 //  Created by Heq.Shinoda on 14-6-9.
-//  Copyright (c) 2014年 RongCloud. All rights reserved.
+//  Copyright (c) 2014年 Heq.Shinoda. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -23,7 +23,7 @@
 @property(nonatomic,assign) NSInteger tag;
 @property(nonatomic, assign) id<HttpConnectionDelegate> httpDelegate;
 
--(id)init;
+-(instancetype)init;
 +(RCHttpRequest*)defaultHttpRequest;
 //----Http comunication----//
 -(void)httpConnectionWithURL:(NSString*)strURL bodyData:(NSData*)data delegate:(id<HttpConnectionDelegate>)delegate;

@@ -7,8 +7,15 @@
 //
 
 #import "UserInfoViewController.h"
-
+#import "RCIM.h"
+#import "UserDataModel.h"
 @interface UserInfoViewController ()
+
+@property (nonatomic,strong) UIBarButtonItem *addItem;
+@property (nonatomic,strong) UIBarButtonItem *replyItem;
+
+@property (nonatomic,strong) UIButton *btn ;
+
 
 @end
 
@@ -48,7 +55,87 @@
     self.navigationItem.leftBarButtonItem=left;
     
     
+    self.btn = [UIButton new];
+    [self.btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.btn setBackgroundColor:[UIColor redColor]];
+    self.btn.layer.cornerRadius = 3.5;
+    [self.btn setFrame:CGRectMake(10, self.view.bounds.size.height - 300, self.view.bounds.size.width - 20, 35)];
+    [self.view addSubview:self.btn];
+
+    //查看是否已经在黑名单，并更新UI
+    [self setBtnState];
 }
+
+-(void) setBtnState
+{
+    //查看是否已经在黑名单，并更新UI
+    __weak typeof(self) weakSelf = self;
+    [[RCIM sharedRCIM] getBlacklist:^(NSArray *blockUserIds) {
+        
+        if([[UserManager shareMainUser].mainUser.userId isEqualToString:weakSelf.targetId])
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.btn setTitle:@"不能添加自己黑名单" forState:UIControlStateNormal];
+                
+            });
+            return;
+            
+        }
+
+        for (NSString *ids in blockUserIds) {
+            if([ids isEqualToString:weakSelf.targetId] )
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    weakSelf.btn.enabled = YES;
+                    [weakSelf.btn setTitle:@"移出黑名单" forState:UIControlStateNormal];
+                    [weakSelf.btn addTarget:weakSelf action:@selector(removeFromBlackList:) forControlEvents:UIControlEventTouchUpInside];
+
+                });
+                return;
+                
+            }
+            
+        }
+
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.btn.enabled = YES;
+            [weakSelf.btn setTitle:@"加入黑名单" forState:UIControlStateNormal];
+            [weakSelf.btn addTarget:weakSelf action:@selector(addToBlackList:) forControlEvents:UIControlEventTouchUpInside];
+        });
+
+
+    } error:NULL];
+}
+
+/**
+ *  加入黑名单
+ *
+ *  @param sender sender description
+ */
+-(void) addToBlackList : (id) sender
+{
+    __weak typeof(self) weakSelf = self;
+    [[RCIM sharedRCIM] addToBlacklist:self.targetId completion:^{
+        [weakSelf setBtnState];
+    } error:^(RCErrorCode status) {
+        DebugLog(@"test is %ld",(long)status);
+    }];
+}
+
+/**
+ *  移除黑名单
+ *
+ *  @param sender sender description
+ */
+-(void) removeFromBlackList:(id) sender
+{
+    __weak typeof(self) weakSelf = self;
+    [[RCIM sharedRCIM] removeFromBlacklist:self.targetId completion:^{
+        [weakSelf setBtnState];
+    } error:NULL];
+}
+
 -(void)didCancel:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:NULL];

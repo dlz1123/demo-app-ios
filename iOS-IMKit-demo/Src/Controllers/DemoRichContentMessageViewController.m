@@ -9,6 +9,7 @@
 #import "DemoRichContentMessageViewController.h"
 #import "DemoChatsettingViewController.h"
 #import "DemoPreviewViewController.h"
+#import "DemoLocationPickerBaiduMapDataSource.h"
 #import "RCIM.h"
 
 @interface DemoRichContentMessageViewController ()

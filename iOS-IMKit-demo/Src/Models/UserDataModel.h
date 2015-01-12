@@ -20,7 +20,7 @@
 @property(nonatomic, strong) NSString* usernamePinyin;
 @property(nonatomic, strong) NSString* portraitPath;
 
--(id)initWithUserData:(NSString*)aUID userName:(NSString*)aUName userNamePY:(NSString*)aUNPY portrait:(NSString*)aPortrait user_Email:(NSString*)aUserEmail;
+-(instancetype)initWithUserData:(NSString*)aUID userName:(NSString*)aUName userNamePY:(NSString*)aUNPY portrait:(NSString*)aPortrait user_Email:(NSString*)aUserEmail;
 @end
 
 

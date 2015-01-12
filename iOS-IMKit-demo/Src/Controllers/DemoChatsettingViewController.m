@@ -98,6 +98,7 @@
         temp.delegate = self;
         [self presentViewController:nav animated:YES completion:nil];
     }
+    
 }
 
 #pragma mark - selectPersonDelegate
@@ -116,6 +117,7 @@
         NSString* userId=(viewController.preSelectedUserIds)[0];
         [memberIdArray addObject:userId];
         RCUserInfo *userInfo=[self getUserInfoWithUserId:userId];
+        
         if (userInfo) {
             [discussionName appendString:userInfo.name];
             [discussionName appendString:@","];

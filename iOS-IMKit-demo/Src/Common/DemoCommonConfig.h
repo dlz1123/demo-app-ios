@@ -10,8 +10,11 @@
 #define RongCloud_CommonConfig_h
 
 
+#define DEV_FAKE_SERVER @"http://119.254.110.241:8080/"  //Beijing SUN-QUAN  测试环境（北京）
+#define PRO_FAKE_SERVER @"http://119.254.110.79:8080/"  //Beijing Liu-Bei    线上环境（北京）
 
-#define FAKE_SERVER @"http://119.254.110.79:8080/"  // 登录服务器地址，请开发者配置
+#define RC_APPKEY_CONFIGFILE @"AppKeyConfig"
+
 
 #define CHECK_PASSWORD_ENABLE 0
 

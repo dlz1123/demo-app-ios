@@ -9,7 +9,8 @@
 #import "DemoChatViewController.h"
 #import "DemoChatsettingViewController.h"
 #import "DemoPreviewViewController.h"
-
+#import "DemoLocationPickerBaiduMapDataSource.h"
+#import "DemoLocationViewController.h"
 
 @implementation DemoChatViewController
 
@@ -68,6 +69,15 @@
 }
 -(void)onEndRecordEvent{
     DebugLog(@"录音结束");
+}
+
+- (id<RCLocationPickerViewControllerDataSource>)locationPickerDataSource {
+    return [[DemoLocationPickerBaiduMapDataSource alloc] init];
+}
+
+- (void)openLocation:(CLLocationCoordinate2D)location locationName:(NSString *)locationName {
+    DemoLocationViewController *locationViewController = [[DemoLocationViewController alloc] initWithLocation:location locationName:locationName];
+    [self.navigationController pushViewController:locationViewController animated:YES];
 }
 
 @end
