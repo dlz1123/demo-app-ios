@@ -10,6 +10,7 @@
 		511F5E4719A6014B008E8343 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511F5E4619A6014B008E8343 /* UserInfoViewController.m */; };
 		512686E619750DAF00413B5C /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 512686E519750DAF00413B5C /* RongCloud.bundle */; };
 		5128D3E719BCAB54000A504D /* DemoGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5128D3E619BCAB54000A504D /* DemoGroupListViewController.m */; };
+		51476B841A766DF900EBA2E0 /* libiOS_IMKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51476B831A766DF900EBA2E0 /* libiOS_IMKit.a */; };
 		515C38821980D7A5006C7ED4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C38811980D7A5006C7ED4 /* HomeViewController.m */; };
 		5160E0CD19B17DA600983874 /* DemoChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5160E0CC19B17DA600983874 /* DemoChatListViewController.m */; };
 		5160E0D019B17E3C00983874 /* DemoChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5160E0CF19B17E3C00983874 /* DemoChatViewController.m */; };
@@ -17,7 +18,6 @@
 		516687C019FE573300DBEB6C /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516687BF19FE573300DBEB6C /* Launch Screen.xib */; };
 		5181848B19CAD65F00FA6FBD /* DemoRenameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5181848A19CAD65F00FA6FBD /* DemoRenameController.m */; };
 		5181848E19CAD6E000FA6FBD /* DemoPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5181848D19CAD6E000FA6FBD /* DemoPreviewViewController.m */; };
-		518E13921A37EF4E009725EC /* libiOS_IMKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 518E13911A37EF4E009725EC /* libiOS_IMKit.a */; };
 		51C2B27A19D92ACA003FD466 /* libNBSAppAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C2B27919D92ACA003FD466 /* libNBSAppAgent.framework */; };
 		51C2B27C19D92AF5003FD466 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C2B27B19D92AF4003FD466 /* CoreTelephony.framework */; };
 		51C2B27E19D92B3D003FD466 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C2B27D19D92B3D003FD466 /* Security.framework */; };
@@ -63,25 +63,7 @@
 		E44534C919F7A39D003A1BEE /* RongCloud-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E44534CC19F7A39D003A1BEE /* RongCloud-Info.plist */; };
 		E45A9FA119F508F1002E7C33 /* DemoRichContentMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E45A9FA019F508F1002E7C33 /* DemoRichContentMessageViewController.m */; };
 		E4AB03E71A5B7BFF001781B9 /* DemoBlacklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AB03E61A5B7BFF001781B9 /* DemoBlacklistViewController.m */; };
-		E4C852CD1A09DC35003EAC48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C852CC1A09DC35003EAC48 /* main.m */; };
-		E4C852D01A09DC35003EAC48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C852CF1A09DC35003EAC48 /* AppDelegate.m */; };
-		E4C852D31A09DC35003EAC48 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C852D21A09DC35003EAC48 /* FirstViewController.m */; };
-		E4C852D61A09DC35003EAC48 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C852D51A09DC35003EAC48 /* SecondViewController.m */; };
-		E4C852D91A09DC35003EAC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C852D71A09DC35003EAC48 /* Main.storyboard */; };
-		E4C852DB1A09DC35003EAC48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C852DA1A09DC35003EAC48 /* Images.xcassets */; };
-		E4C852DE1A09DC35003EAC48 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C852DC1A09DC35003EAC48 /* LaunchScreen.xib */; };
-		E4C852EA1A09DC35003EAC48 /* RongIMKitDemoHDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C852E91A09DC35003EAC48 /* RongIMKitDemoHDTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E4C852E41A09DC35003EAC48 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B267DF7F1932E23900B5FFC3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E4C852C71A09DC35003EAC48;
-			remoteInfo = RongIMKitDemoHD;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		511F5E4519A6014B008E8343 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
@@ -89,6 +71,47 @@
 		512686E519750DAF00413B5C /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
 		5128D3E519BCAB54000A504D /* DemoGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoGroupListViewController.h; sourceTree = "<group>"; };
 		5128D3E619BCAB54000A504D /* DemoGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoGroupListViewController.m; sourceTree = "<group>"; };
+		51476B5B1A766DF900EBA2E0 /* AmrDataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmrDataConverter.h; sourceTree = "<group>"; };
+		51476B5C1A766DF900EBA2E0 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		51476B5D1A766DF900EBA2E0 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		51476B5E1A766DF900EBA2E0 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		51476B5F1A766DF900EBA2E0 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		51476B601A766DF900EBA2E0 /* RCBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBasicViewController.h; sourceTree = "<group>"; };
+		51476B611A766DF900EBA2E0 /* RCChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatListViewController.h; sourceTree = "<group>"; };
+		51476B621A766DF900EBA2E0 /* RCChatSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatSettingViewController.h; sourceTree = "<group>"; };
+		51476B631A766DF900EBA2E0 /* RCChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatViewController.h; sourceTree = "<group>"; };
+		51476B641A766DF900EBA2E0 /* RCClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCClientDelegate.h; sourceTree = "<group>"; };
+		51476B651A766DF900EBA2E0 /* RCCommandNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCommandNotificationMessage.h; sourceTree = "<group>"; };
+		51476B661A766DF900EBA2E0 /* RCContactNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCContactNotificationMessage.h; sourceTree = "<group>"; };
+		51476B671A766DF900EBA2E0 /* RCConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCConversation.h; sourceTree = "<group>"; };
+		51476B681A766DF900EBA2E0 /* RCDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussion.h; sourceTree = "<group>"; };
+		51476B691A766DF900EBA2E0 /* RCDiscussionNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussionNotification.h; sourceTree = "<group>"; };
+		51476B6A1A766DF900EBA2E0 /* RCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroup.h; sourceTree = "<group>"; };
+		51476B6B1A766DF900EBA2E0 /* RCGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroupListViewController.h; sourceTree = "<group>"; };
+		51476B6C1A766DF900EBA2E0 /* RCHandShakeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHandShakeMessage.h; sourceTree = "<group>"; };
+		51476B6D1A766DF900EBA2E0 /* RCIM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIM.h; sourceTree = "<group>"; };
+		51476B6E1A766DF900EBA2E0 /* RCImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCImageMessage.h; sourceTree = "<group>"; };
+		51476B6F1A766DF900EBA2E0 /* RCIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClient.h; sourceTree = "<group>"; };
+		51476B701A766DF900EBA2E0 /* RCIMClientHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClientHeader.h; sourceTree = "<group>"; };
+		51476B711A766DF900EBA2E0 /* RCInfomationNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCInfomationNotificationMessage.h; sourceTree = "<group>"; };
+		51476B721A766DF900EBA2E0 /* RCLocationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationMessage.h; sourceTree = "<group>"; };
+		51476B731A766DF900EBA2E0 /* RCLocationPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationPickerViewController.h; sourceTree = "<group>"; };
+		51476B741A766DF900EBA2E0 /* RCLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationViewController.h; sourceTree = "<group>"; };
+		51476B751A766DF900EBA2E0 /* RCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessage.h; sourceTree = "<group>"; };
+		51476B761A766DF900EBA2E0 /* RCMessageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessageContent.h; sourceTree = "<group>"; };
+		51476B771A766DF900EBA2E0 /* RCNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNotificationMessage.h; sourceTree = "<group>"; };
+		51476B781A766DF900EBA2E0 /* RCPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCPreviewViewController.h; sourceTree = "<group>"; };
+		51476B791A766DF900EBA2E0 /* RCProfileNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCProfileNotificationMessage.h; sourceTree = "<group>"; };
+		51476B7A1A766DF900EBA2E0 /* RCRenameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRenameViewController.h; sourceTree = "<group>"; };
+		51476B7B1A766DF900EBA2E0 /* RCRichContentMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRichContentMessage.h; sourceTree = "<group>"; };
+		51476B7C1A766DF900EBA2E0 /* RCSelectPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSelectPersonViewController.h; sourceTree = "<group>"; };
+		51476B7D1A766DF900EBA2E0 /* RCStatusDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusDefine.h; sourceTree = "<group>"; };
+		51476B7E1A766DF900EBA2E0 /* RCStatusMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusMessage.h; sourceTree = "<group>"; };
+		51476B7F1A766DF900EBA2E0 /* RCTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTextMessage.h; sourceTree = "<group>"; };
+		51476B801A766DF900EBA2E0 /* RCThemeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCThemeDefine.h; sourceTree = "<group>"; };
+		51476B811A766DF900EBA2E0 /* RCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserInfo.h; sourceTree = "<group>"; };
+		51476B821A766DF900EBA2E0 /* RCVoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCVoiceMessage.h; sourceTree = "<group>"; };
+		51476B831A766DF900EBA2E0 /* libiOS_IMKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOS_IMKit.a; sourceTree = "<group>"; };
 		515C38801980D7A5006C7ED4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		515C38811980D7A5006C7ED4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		5160E0CB19B17DA600983874 /* DemoChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoChatListViewController.h; sourceTree = "<group>"; };
@@ -102,7 +125,6 @@
 		5181848A19CAD65F00FA6FBD /* DemoRenameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoRenameController.m; sourceTree = "<group>"; };
 		5181848C19CAD6E000FA6FBD /* DemoPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoPreviewViewController.h; sourceTree = "<group>"; };
 		5181848D19CAD6E000FA6FBD /* DemoPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoPreviewViewController.m; sourceTree = "<group>"; };
-		518E13911A37EF4E009725EC /* libiOS_IMKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiOS_IMKit.a; path = "iOS-IMKit-demo/Libs/libiOS_IMKit.a"; sourceTree = "<group>"; };
 		51C2B27919D92ACA003FD466 /* libNBSAppAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libNBSAppAgent.framework; path = "iOS-IMKit-demo/nbs-newlens-ios/libNBSAppAgent.framework"; sourceTree = "<group>"; };
 		51C2B27B19D92AF4003FD466 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		51C2B27D19D92B3D003FD466 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -233,21 +255,6 @@
 		E45A9FA019F508F1002E7C33 /* DemoRichContentMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoRichContentMessageViewController.m; sourceTree = "<group>"; };
 		E4AB03E51A5B7BFF001781B9 /* DemoBlacklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBlacklistViewController.h; sourceTree = "<group>"; };
 		E4AB03E61A5B7BFF001781B9 /* DemoBlacklistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBlacklistViewController.m; sourceTree = "<group>"; };
-		E4C852C81A09DC35003EAC48 /* RongIMKitDemoHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RongIMKitDemoHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4C852CB1A09DC35003EAC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4C852CC1A09DC35003EAC48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E4C852CE1A09DC35003EAC48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E4C852CF1A09DC35003EAC48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E4C852D11A09DC35003EAC48 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		E4C852D21A09DC35003EAC48 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E4C852D41A09DC35003EAC48 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		E4C852D51A09DC35003EAC48 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		E4C852D81A09DC35003EAC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E4C852DA1A09DC35003EAC48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E4C852DD1A09DC35003EAC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E4C852E31A09DC35003EAC48 /* RongIMKitDemoHDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RongIMKitDemoHDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4C852E81A09DC35003EAC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4C852E91A09DC35003EAC48 /* RongIMKitDemoHDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RongIMKitDemoHDTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +274,7 @@
 				E2ADF8B21A11B35500CCB268 /* libbaidumapapi.a in Frameworks */,
 				B2317496198A595800A10B65 /* CoreVideo.framework in Frameworks */,
 				B2317492198A593200A10B65 /* CFNetwork.framework in Frameworks */,
-				518E13921A37EF4E009725EC /* libiOS_IMKit.a in Frameworks */,
+				51476B841A766DF900EBA2E0 /* libiOS_IMKit.a in Frameworks */,
 				B231748F198A592900A10B65 /* CoreAudio.framework in Frameworks */,
 				B2317490198A592900A10B65 /* CoreMedia.framework in Frameworks */,
 				B20391E4195A716500A2019F /* SystemConfiguration.framework in Frameworks */,
@@ -280,23 +287,66 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4C852C51A09DC35003EAC48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4C852E01A09DC35003EAC48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51476B591A766DF900EBA2E0 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				51476B5A1A766DF900EBA2E0 /* Headers */,
+				51476B831A766DF900EBA2E0 /* libiOS_IMKit.a */,
+			);
+			name = Libs;
+			path = "iOS-IMKit-demo/Libs";
+			sourceTree = "<group>";
+		};
+		51476B5A1A766DF900EBA2E0 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				51476B5B1A766DF900EBA2E0 /* AmrDataConverter.h */,
+				51476B5C1A766DF900EBA2E0 /* dec_if.h */,
+				51476B5D1A766DF900EBA2E0 /* if_rom.h */,
+				51476B5E1A766DF900EBA2E0 /* interf_dec.h */,
+				51476B5F1A766DF900EBA2E0 /* interf_enc.h */,
+				51476B601A766DF900EBA2E0 /* RCBasicViewController.h */,
+				51476B611A766DF900EBA2E0 /* RCChatListViewController.h */,
+				51476B621A766DF900EBA2E0 /* RCChatSettingViewController.h */,
+				51476B631A766DF900EBA2E0 /* RCChatViewController.h */,
+				51476B641A766DF900EBA2E0 /* RCClientDelegate.h */,
+				51476B651A766DF900EBA2E0 /* RCCommandNotificationMessage.h */,
+				51476B661A766DF900EBA2E0 /* RCContactNotificationMessage.h */,
+				51476B671A766DF900EBA2E0 /* RCConversation.h */,
+				51476B681A766DF900EBA2E0 /* RCDiscussion.h */,
+				51476B691A766DF900EBA2E0 /* RCDiscussionNotification.h */,
+				51476B6A1A766DF900EBA2E0 /* RCGroup.h */,
+				51476B6B1A766DF900EBA2E0 /* RCGroupListViewController.h */,
+				51476B6C1A766DF900EBA2E0 /* RCHandShakeMessage.h */,
+				51476B6D1A766DF900EBA2E0 /* RCIM.h */,
+				51476B6E1A766DF900EBA2E0 /* RCImageMessage.h */,
+				51476B6F1A766DF900EBA2E0 /* RCIMClient.h */,
+				51476B701A766DF900EBA2E0 /* RCIMClientHeader.h */,
+				51476B711A766DF900EBA2E0 /* RCInfomationNotificationMessage.h */,
+				51476B721A766DF900EBA2E0 /* RCLocationMessage.h */,
+				51476B731A766DF900EBA2E0 /* RCLocationPickerViewController.h */,
+				51476B741A766DF900EBA2E0 /* RCLocationViewController.h */,
+				51476B751A766DF900EBA2E0 /* RCMessage.h */,
+				51476B761A766DF900EBA2E0 /* RCMessageContent.h */,
+				51476B771A766DF900EBA2E0 /* RCNotificationMessage.h */,
+				51476B781A766DF900EBA2E0 /* RCPreviewViewController.h */,
+				51476B791A766DF900EBA2E0 /* RCProfileNotificationMessage.h */,
+				51476B7A1A766DF900EBA2E0 /* RCRenameViewController.h */,
+				51476B7B1A766DF900EBA2E0 /* RCRichContentMessage.h */,
+				51476B7C1A766DF900EBA2E0 /* RCSelectPersonViewController.h */,
+				51476B7D1A766DF900EBA2E0 /* RCStatusDefine.h */,
+				51476B7E1A766DF900EBA2E0 /* RCStatusMessage.h */,
+				51476B7F1A766DF900EBA2E0 /* RCTextMessage.h */,
+				51476B801A766DF900EBA2E0 /* RCThemeDefine.h */,
+				51476B811A766DF900EBA2E0 /* RCUserInfo.h */,
+				51476B821A766DF900EBA2E0 /* RCVoiceMessage.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		B23DC78D1942D8CB009D9E1B /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,8 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				B267DF901932E23900B5FFC3 /* iOS-IMKit-demo */,
-				E4C852C91A09DC35003EAC48 /* RongIMKitDemoHD */,
-				E4C852E61A09DC35003EAC48 /* RongIMKitDemoHDTests */,
 				B267DF891932E23900B5FFC3 /* Frameworks */,
 				B267DF881932E23900B5FFC3 /* Products */,
 			);
@@ -330,8 +378,6 @@
 			isa = PBXGroup;
 			children = (
 				B267DF871932E23900B5FFC3 /* iOS-IMKit-demo.app */,
-				E4C852C81A09DC35003EAC48 /* RongIMKitDemoHD.app */,
-				E4C852E31A09DC35003EAC48 /* RongIMKitDemoHDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,7 +385,7 @@
 		B267DF891932E23900B5FFC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				518E13911A37EF4E009725EC /* libiOS_IMKit.a */,
+				51476B591A766DF900EBA2E0 /* Libs */,
 				E2ADF8B41A11B5DC00CCB268 /* libz.dylib */,
 				E28A4ACF1A0C5EC800E6099D /* CoreLocation.framework */,
 				E4378CCC1A00C5C200612A3F /* MapKit.framework */,
@@ -575,49 +621,6 @@
 			path = "Release-iphonesimulator";
 			sourceTree = "<group>";
 		};
-		E4C852C91A09DC35003EAC48 /* RongIMKitDemoHD */ = {
-			isa = PBXGroup;
-			children = (
-				E4C852CE1A09DC35003EAC48 /* AppDelegate.h */,
-				E4C852CF1A09DC35003EAC48 /* AppDelegate.m */,
-				E4C852D11A09DC35003EAC48 /* FirstViewController.h */,
-				E4C852D21A09DC35003EAC48 /* FirstViewController.m */,
-				E4C852D41A09DC35003EAC48 /* SecondViewController.h */,
-				E4C852D51A09DC35003EAC48 /* SecondViewController.m */,
-				E4C852D71A09DC35003EAC48 /* Main.storyboard */,
-				E4C852DA1A09DC35003EAC48 /* Images.xcassets */,
-				E4C852DC1A09DC35003EAC48 /* LaunchScreen.xib */,
-				E4C852CA1A09DC35003EAC48 /* Supporting Files */,
-			);
-			path = RongIMKitDemoHD;
-			sourceTree = "<group>";
-		};
-		E4C852CA1A09DC35003EAC48 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E4C852CB1A09DC35003EAC48 /* Info.plist */,
-				E4C852CC1A09DC35003EAC48 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E4C852E61A09DC35003EAC48 /* RongIMKitDemoHDTests */ = {
-			isa = PBXGroup;
-			children = (
-				E4C852E91A09DC35003EAC48 /* RongIMKitDemoHDTests.m */,
-				E4C852E71A09DC35003EAC48 /* Supporting Files */,
-			);
-			path = RongIMKitDemoHDTests;
-			sourceTree = "<group>";
-		};
-		E4C852E71A09DC35003EAC48 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E4C852E81A09DC35003EAC48 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -639,41 +642,6 @@
 			productReference = B267DF871932E23900B5FFC3 /* iOS-IMKit-demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E4C852C71A09DC35003EAC48 /* RongIMKitDemoHD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4C852EB1A09DC35003EAC48 /* Build configuration list for PBXNativeTarget "RongIMKitDemoHD" */;
-			buildPhases = (
-				E4C852C41A09DC35003EAC48 /* Sources */,
-				E4C852C51A09DC35003EAC48 /* Frameworks */,
-				E4C852C61A09DC35003EAC48 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = RongIMKitDemoHD;
-			productName = RongIMKitDemoHD;
-			productReference = E4C852C81A09DC35003EAC48 /* RongIMKitDemoHD.app */;
-			productType = "com.apple.product-type.application";
-		};
-		E4C852E21A09DC35003EAC48 /* RongIMKitDemoHDTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4C852EE1A09DC35003EAC48 /* Build configuration list for PBXNativeTarget "RongIMKitDemoHDTests" */;
-			buildPhases = (
-				E4C852DF1A09DC35003EAC48 /* Sources */,
-				E4C852E01A09DC35003EAC48 /* Frameworks */,
-				E4C852E11A09DC35003EAC48 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E4C852E51A09DC35003EAC48 /* PBXTargetDependency */,
-			);
-			name = RongIMKitDemoHDTests;
-			productName = RongIMKitDemoHDTests;
-			productReference = E4C852E31A09DC35003EAC48 /* RongIMKitDemoHDTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -692,13 +660,6 @@
 							};
 						};
 					};
-					E4C852C71A09DC35003EAC48 = {
-						CreatedOnToolsVersion = 6.1;
-					};
-					E4C852E21A09DC35003EAC48 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = E4C852C71A09DC35003EAC48;
-					};
 				};
 			};
 			buildConfigurationList = B267DF821932E23900B5FFC3 /* Build configuration list for PBXProject "iOS-IMKit-demo" */;
@@ -716,8 +677,6 @@
 			projectRoot = "";
 			targets = (
 				B267DF861932E23900B5FFC3 /* iOS-IMKit-demo */,
-				E4C852C71A09DC35003EAC48 /* RongIMKitDemoHD */,
-				E4C852E21A09DC35003EAC48 /* RongIMKitDemoHDTests */,
 			);
 		};
 /* End PBXProject section */
@@ -736,23 +695,6 @@
 				E2ADF8B11A11B35500CCB268 /* readme.txt in Resources */,
 				512686E619750DAF00413B5C /* RongCloud.bundle in Resources */,
 				516687C019FE573300DBEB6C /* Launch Screen.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4C852C61A09DC35003EAC48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4C852D91A09DC35003EAC48 /* Main.storyboard in Resources */,
-				E4C852DE1A09DC35003EAC48 /* LaunchScreen.xib in Resources */,
-				E4C852DB1A09DC35003EAC48 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4C852E11A09DC35003EAC48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,34 +749,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4C852C41A09DC35003EAC48 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4C852D61A09DC35003EAC48 /* SecondViewController.m in Sources */,
-				E4C852D01A09DC35003EAC48 /* AppDelegate.m in Sources */,
-				E4C852D31A09DC35003EAC48 /* FirstViewController.m in Sources */,
-				E4C852CD1A09DC35003EAC48 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4C852DF1A09DC35003EAC48 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4C852EA1A09DC35003EAC48 /* RongIMKitDemoHDTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E4C852E51A09DC35003EAC48 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E4C852C71A09DC35003EAC48 /* RongIMKitDemoHD */;
-			targetProxy = E4C852E41A09DC35003EAC48 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B267DFC21932E37400B5FFC3 /* InfoPlist.strings */ = {
@@ -862,22 +777,6 @@
 				E44534CD19F7A3A3003A1BEE /* zh-Hans */,
 			);
 			name = "RongCloud-Info.plist";
-			sourceTree = "<group>";
-		};
-		E4C852D71A09DC35003EAC48 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4C852D81A09DC35003EAC48 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E4C852DC1A09DC35003EAC48 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4C852DD1A09DC35003EAC48 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1013,120 +912,6 @@
 			};
 			name = Release;
 		};
-		E4C852EC1A09DC35003EAC48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = RongIMKitDemoHD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Debug;
-		};
-		E4C852ED1A09DC35003EAC48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = RongIMKitDemoHD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Release;
-		};
-		E4C852EF1A09DC35003EAC48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = RongIMKitDemoHDTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RongIMKitDemoHD.app/RongIMKitDemoHD";
-			};
-			name = Debug;
-		};
-		E4C852F01A09DC35003EAC48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = RongIMKitDemoHDTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RongIMKitDemoHD.app/RongIMKitDemoHD";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1144,24 +929,6 @@
 			buildConfigurations = (
 				B267DFAB1932E23900B5FFC3 /* Debug */,
 				B267DFAC1932E23900B5FFC3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4C852EB1A09DC35003EAC48 /* Build configuration list for PBXNativeTarget "RongIMKitDemoHD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E4C852EC1A09DC35003EAC48 /* Debug */,
-				E4C852ED1A09DC35003EAC48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4C852EE1A09DC35003EAC48 /* Build configuration list for PBXNativeTarget "RongIMKitDemoHDTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E4C852EF1A09DC35003EAC48 /* Debug */,
-				E4C852F01A09DC35003EAC48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
