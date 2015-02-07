@@ -296,7 +296,7 @@
         }
         
         if (6 == indexPath.row) {
-            RCChatViewController *temp = [[RCChatViewController alloc]init];
+            DemoRichContentMessageViewController *temp = [[DemoRichContentMessageViewController alloc]init];
             
             temp.currentTarget = [UserManager shareMainUser ].mainUser.userId;
             temp.conversationType = ConversationType_PRIVATE;
