@@ -371,12 +371,12 @@
             DemoChatViewController *temp = [[DemoChatViewController alloc]init];
             
             temp.currentTarget = [self getKeFuId];
-            temp.conversationType = ConversationType_PRIVATE;
+            temp.conversationType = ConversationType_CUSTOMERSERVICE;
             temp.currentTargetName = @"客服";
             //temp.enableSettings = NO;
             temp.enableVoIP = NO;
             RCHandShakeMessage* textMsg = [[RCHandShakeMessage alloc] init];
-            [[RCIM sharedRCIM] sendMessage:ConversationType_PRIVATE targetId:customerServiceUserId content:textMsg delegate:nil];
+            [[RCIM sharedRCIM] sendMessage:ConversationType_CUSTOMERSERVICE targetId:customerServiceUserId content:textMsg delegate:nil];
             
             [self.navigationController pushViewController:temp animated:YES];
             
