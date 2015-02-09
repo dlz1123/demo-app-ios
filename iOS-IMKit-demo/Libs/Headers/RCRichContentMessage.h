@@ -8,7 +8,7 @@
 
 #import "RCMessageContent.h"
 #import <UIKit/UIKit.h>
-
+#define RCRichContentMessageTypeIdentifier      @"RC:ImgTextMsg"
 /**
     图文消息
  */

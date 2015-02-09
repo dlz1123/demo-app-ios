@@ -7,7 +7,7 @@
 //
 
 #import "RCMessageContent.h"
-
+#define RCVoiceMessageTypeIdentifier            @"RC:VcMsg"
 /**
     声音消息
  */

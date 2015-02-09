@@ -375,7 +375,7 @@
             temp.currentTargetName = @"客服";
             //temp.enableSettings = NO;
             temp.enableVoIP = NO;
-            RCHandShakeMessage* textMsg = [[RCHandShakeMessage alloc] initWithType:1];
+            RCHandShakeMessage* textMsg = [[RCHandShakeMessage alloc] init];
             [[RCIM sharedRCIM] sendMessage:ConversationType_PRIVATE targetId:customerServiceUserId content:textMsg delegate:nil];
             
             [self.navigationController pushViewController:temp animated:YES];

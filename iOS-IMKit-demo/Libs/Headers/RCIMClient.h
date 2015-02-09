@@ -612,4 +612,6 @@
 
 -(void) getBlacklist:(void(^)(NSArray *blockUserIds))completion error:(void(^)(RCErrorCode status))error;
 
+
+
 @end

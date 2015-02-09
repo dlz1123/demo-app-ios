@@ -105,10 +105,10 @@ typedef void (^didTapMessageHandler)(RCMessage *metadata);
 -(void)drag4ResetDefaultBottomBarStatus;
 
 /**
- * @override, 子类需要重写来实现简单监听发送消息，此方法不用于消息处理
- * 监听发送消息，可以获取UI界面发送的消息
+ * @override,消息过滤，消息发送前调用，可以在发送前添加附加信息等等
+ *
  */
--(void)willSendMessage:(RCMessage *)message;
+-(RCMessageContent*)willSendMessage:(RCMessageContent *)message;
 
 /**
  *  导航左面按钮点击事件

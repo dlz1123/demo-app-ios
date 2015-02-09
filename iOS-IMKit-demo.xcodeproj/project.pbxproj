@@ -21,6 +21,7 @@
 		51C2B27A19D92ACA003FD466 /* libNBSAppAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C2B27919D92ACA003FD466 /* libNBSAppAgent.framework */; };
 		51C2B27C19D92AF5003FD466 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C2B27B19D92AF4003FD466 /* CoreTelephony.framework */; };
 		51C2B27E19D92B3D003FD466 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C2B27D19D92B3D003FD466 /* Security.framework */; };
+		51F651DD1A88D4ED0038FA69 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F651DC1A88D4ED0038FA69 /* libsqlite3.dylib */; };
 		B20391E4195A716500A2019F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20391E3195A716500A2019F /* SystemConfiguration.framework */; };
 		B225036819330B1D00D5E003 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225036719330B1D00D5E003 /* QuartzCore.framework */; };
 		B2309731197F52810059A6EC /* AppKeyConfig in Resources */ = {isa = PBXBuildFile; fileRef = B2309730197F52810059A6EC /* AppKeyConfig */; };
@@ -128,6 +129,7 @@
 		51C2B27919D92ACA003FD466 /* libNBSAppAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libNBSAppAgent.framework; path = "iOS-IMKit-demo/nbs-newlens-ios/libNBSAppAgent.framework"; sourceTree = "<group>"; };
 		51C2B27B19D92AF4003FD466 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		51C2B27D19D92B3D003FD466 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		51F651DC1A88D4ED0038FA69 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B20391E3195A716500A2019F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B225036719330B1D00D5E003 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B225037519330BDB00D5E003 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
@@ -262,6 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F651DD1A88D4ED0038FA69 /* libsqlite3.dylib in Frameworks */,
 				E2ADF8B51A11B5DC00CCB268 /* libz.dylib in Frameworks */,
 				E2ADF8AF1A11B35500CCB268 /* libbaidumapapi.a in Frameworks */,
 				E28A4AD01A0C5EC800E6099D /* CoreLocation.framework in Frameworks */,
@@ -385,6 +388,7 @@
 		B267DF891932E23900B5FFC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51F651DC1A88D4ED0038FA69 /* libsqlite3.dylib */,
 				51476B591A766DF900EBA2E0 /* Libs */,
 				E2ADF8B41A11B5DC00CCB268 /* libz.dylib */,
 				E28A4ACF1A0C5EC800E6099D /* CoreLocation.framework */,
@@ -871,7 +875,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9a1ecd9f-be81-4183-a266-d1f9f725d51f";
-				VALID_ARCHS = "$(inherited)";
+				VALID_ARCHS = "$(inherited) i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -907,7 +911,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "428e7e52-e86d-410b-bca6-f582a0611b8e";
-				VALID_ARCHS = "$(inherited)";
+				VALID_ARCHS = "$(inherited) i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "RCMessageContent.h"
+#define RCLocationMessageTypeIdentifier @"RC:LBSMsg"
 /**
  *  地理位置消息
  */

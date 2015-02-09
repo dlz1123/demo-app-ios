@@ -317,15 +317,9 @@ typedef NS_ENUM(NSUInteger, RCCurrentConnectionStatus)
 
 
 #define kRCDidReceiveMessageNotification        @"RCDidReceiveMessageNotification"
-#define RCTextMessageTypeIdentifier             @"RC:TxtMsg"
-#define RCImageMessageTypeIdentifier            @"RC:ImgMsg"
-#define RCVoiceMessageTypeIdentifier            @"RC:VcMsg"
-#define RCDiscussionNotificationTypeIdentifier  @"RC:DizNtf"
-
-#define RCRichContentMessageTypeIdentifier      @"RC:ImgTextMsg"
 #define RCNotificationMessageTypeIdentifier     @"RC:NtfMsg"
 #pragma mark TODO: LBS 定义地理位置消息的objectName
-#define RCLocationMessageTypeIdentifier @"RC:LBSMsg"
+
 
 
 #endif

@@ -7,7 +7,7 @@
 //
 
 #import "RCNotificationMessage.h"
-
+#define RCDiscussionNotificationTypeIdentifier  @"RC:DizNtf"
 /** 
     @enum RCDiscussionNotificationType
  */

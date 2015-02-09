@@ -10,7 +10,7 @@
 
 #define RCInfomationNotificationMessageIdentifier  @"RC:InfoNtf"
 /**
- *  系统消息类
+ *  通知消息类
  */
 @interface RCInfomationNotificationMessage : RCNotificationMessage
 

@@ -11,8 +11,7 @@
 #define RCHandShakeMessageTypeIdentifier @"RC:HsMsg"
 
 @interface RCHandShakeMessage : RCMessageContent<RCMessageCoding,RCMessagePersistentCompatible>
-@property(nonatomic, assign) int type;
 
--(RCHandShakeMessage*)initWithType:(int)aType;
+-(RCHandShakeMessage*)init;
 
 @end

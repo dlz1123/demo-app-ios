@@ -7,7 +7,7 @@
 //
 
 #import "RCMessageContent.h"
-
+#define RCTextMessageTypeIdentifier             @"RC:TxtMsg"
 /**
     文本消息类定义
  */
