@@ -70,42 +70,40 @@
 {
     //查看是否已经在黑名单，并更新UI
     __weak typeof(self) weakSelf = self;
-    [[RCIM sharedRCIM] getBlacklist:^(NSArray *blockUserIds) {
-        
-        if([[UserManager shareMainUser].mainUser.userId isEqualToString:weakSelf.targetId])
+    if ([[UserManager shareMainUser].mainUser.userId isEqual:self.targetId]) {
+        [self.btn setEnabled:NO];
+        [self.btn setTitle:@"不能添加自己黑名单" forState:UIControlStateDisabled];
+        return;
+
+    }
+    [[RCIM sharedRCIM] getBlacklistStatus:self.targetId completion:^(int bizStatus) {
+        if (bizStatus == 0)
         {
+            
             dispatch_async(dispatch_get_main_queue(), ^{
-                [weakSelf.btn setTitle:@"不能添加自己黑名单" forState:UIControlStateNormal];
+                weakSelf.btn.enabled = YES;
+                [weakSelf.btn removeTarget:weakSelf action:@selector(addToBlackList:) forControlEvents:UIControlEventTouchUpInside];
+                [weakSelf.btn setTitle:@"移出黑名单" forState:UIControlStateNormal];
+                [weakSelf.btn addTarget:weakSelf action:@selector(removeFromBlackList:) forControlEvents:UIControlEventTouchUpInside];
                 
             });
-            return;
             
         }
-
-        for (NSString *ids in blockUserIds) {
-            if([ids isEqualToString:weakSelf.targetId] )
-            {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    weakSelf.btn.enabled = YES;
-                    [weakSelf.btn setTitle:@"移出黑名单" forState:UIControlStateNormal];
-                    [weakSelf.btn addTarget:weakSelf action:@selector(removeFromBlackList:) forControlEvents:UIControlEventTouchUpInside];
-
-                });
-                return;
-                
-            }
+        else if (bizStatus == 101)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.btn.enabled = YES;
+                [weakSelf.btn removeTarget:weakSelf action:@selector(removeFromBlackList:) forControlEvents:UIControlEventTouchUpInside];
+                [weakSelf.btn setTitle:@"加入黑名单" forState:UIControlStateNormal];
+                [weakSelf.btn addTarget:weakSelf action:@selector(addToBlackList:) forControlEvents:UIControlEventTouchUpInside];
+            });
             
         }
-
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.btn.enabled = YES;
-            [weakSelf.btn setTitle:@"加入黑名单" forState:UIControlStateNormal];
-            [weakSelf.btn addTarget:weakSelf action:@selector(addToBlackList:) forControlEvents:UIControlEventTouchUpInside];
-        });
+    } error:^(RCErrorCode status) {
+        
+    }];
 
-
-    } error:NULL];
 }
 
 /**

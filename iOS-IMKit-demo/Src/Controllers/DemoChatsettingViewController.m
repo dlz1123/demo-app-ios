@@ -144,7 +144,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 //成功创建讨论组跳转
-                //[weakSelf didCreateDiscussion:discussionInfo];
+//                [weakSelf didCreateDiscussion:discussionInfo];
             });
         } error:^(RCErrorCode status) {
             

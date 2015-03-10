@@ -22,7 +22,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     //自定义导航标题颜色
     [self setNavigationTitle:self.currentTargetName textColor:[UIColor whiteColor]];
     

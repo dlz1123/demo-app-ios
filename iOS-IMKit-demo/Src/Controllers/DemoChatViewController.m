@@ -37,7 +37,13 @@
         self.navigationItem.rightBarButtonItem = rightButton;
     }
 }
-
+/**
+ * 重写父类方法，接收发送的消息，此方法仅用于简单监听
+ */
+- (void)sendMessageEventListener:(RCMessage *)message
+{
+    NSLog(@"%s", __FUNCTION__);
+}
 -(void)leftBarButtonItemPressed:(id)sender
 {
     [super leftBarButtonItemPressed:sender];

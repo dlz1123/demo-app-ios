@@ -16,6 +16,7 @@
 #import "DemoCommonConfig.h"
 #import "DemoRichContentMessageViewController.h"
 #import "DemoBlacklistViewController.h"
+#import "DemoMessageNotifySettingTableViewController.h"
 
 @interface HomeViewController ()<RCIMConnectionStatusDelegate,RCIMGroupInfoFetcherDelegate>
 
@@ -47,7 +48,7 @@
         [_groupList addObject:group003];
         
         [[RCIMClient sharedRCIMClient]syncGroups:_groupList completion:^{
-            
+            NSLog(@"同步成功");
         } error:^(RCErrorCode status) {
             DebugLog(@"同步群数据status%d",(int)status);
         }];
@@ -166,8 +167,10 @@
             cell.textLabel.text = [NSString stringWithFormat:@"注销[%@]",self.currentUserId];
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
-        
         [self.dataList addObject:cell];
+        
+        [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(rBarButtonClicked:)];
         
     }
     
@@ -179,6 +182,13 @@
     self.tableView.rowHeight = 65;
     
     [self.view addSubview:self.tableView];
+
+}
+
+-(void) rBarButtonClicked:(id) sender
+{
+    DemoMessageNotifySettingTableViewController *nvc = [[DemoMessageNotifySettingTableViewController alloc] init];
+    [self.navigationController pushViewController:nvc animated:YES];
 }
 
 
@@ -229,7 +239,6 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = (self.dataList)[indexPath.row];
-    
     return  cell;
 }
 
@@ -248,7 +257,8 @@
         //启动单聊
         if (1 == indexPath.row) {
             
-            UIViewController * temp= [[RCIM sharedRCIM]createPrivateChat:[UserManager shareMainUser ].mainUser.userId title:@"单聊" completion:NULL];
+            RCChatViewController * temp= [[RCIM sharedRCIM]createPrivateChat:[UserManager shareMainUser ].mainUser.userId title:@"单聊" completion:NULL];
+            temp.enableVoIP = NO;
             [self.navigationController pushViewController:temp animated:YES];
         }
         //启动客户
@@ -296,7 +306,7 @@
         }
         
         if (6 == indexPath.row) {
-            DemoRichContentMessageViewController *temp = [[DemoRichContentMessageViewController alloc]init];
+             DemoRichContentMessageViewController *temp = [[DemoRichContentMessageViewController alloc]init];
             
             temp.currentTarget = [UserManager shareMainUser ].mainUser.userId;
             temp.conversationType = ConversationType_PRIVATE;
@@ -354,6 +364,7 @@
             temp.currentTargetName = @"单聊";
             temp.enableSettings = NO;
             temp.enablePOI = NO;
+            temp.enableVoIP = NO;
             temp.portraitStyle = RCUserAvatarCycle;
             
             [self.navigationController pushViewController:temp animated:YES];

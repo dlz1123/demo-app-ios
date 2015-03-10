@@ -41,6 +41,7 @@
     titleLabel.text = @"黑名单";
     titleLabel.textColor = [UIColor whiteColor];
     self.navigationItem.titleView = titleLabel;
+
     
     self.blacklist = [NSMutableArray new];
     self.blacklistIds = [NSMutableArray new];
@@ -48,18 +49,12 @@
     self.tableView.delegate = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     self.tableView.rowHeight = 66.0f;
+    self.tableView.tableFooterView = [UIView new];
     __weak typeof(self) weakSelf = self;
     [[RCIM sharedRCIM] getBlacklist:^(NSArray *blockUserIds) {
-        if (blockUserIds == nil) {
-            /*dispatch_async(dispatch_get_main_queue(), ^{
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                                    message:@"暂无数据"
-                                                                   delegate:nil
-                                                          cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-                [alertView show];
-            });*/
-        }else{
-            self.blacklistIds = [NSMutableArray arrayWithArray:blockUserIds];
+        if (blockUserIds != nil)
+        {
+            weakSelf.blacklistIds = [NSMutableArray arrayWithArray:blockUserIds];
             for (NSString *str in self.blacklistIds) {
                 for (RCUserInfo *user in [(AppDelegate*)[UIApplication sharedApplication].delegate friendList]) {
                     if ([user.userId isEqualToString:str]) {
@@ -67,10 +62,10 @@
                     }
                 }
             }
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [weakSelf.tableView reloadData];
-            });
         }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView reloadData];
+        });
     } error:^(RCErrorCode status) {
         
     }];
@@ -115,6 +110,7 @@
             [weakSelf.blacklistIds addObject:_selectedUserId];
             NSLog(@"addToBlockList success blacklist>>%@, weakSelf.blacklistIds>%@", weakSelf.blacklist,weakSelf.blacklistIds);
             dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
                 [weakSelf.tableView reloadData];
             });
         } error:^(RCErrorCode status) {
@@ -164,6 +160,8 @@
                    
                    // Delete the row from the data source.
                    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+//                   [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+//                   [tableView reloadData];
                    NSLog(@"removeFromBlockList success weakself.blacklist>>%@, weakSelf.blacklistIds>%@",weakself.blacklist, weakself.blacklistIds);
                });
            } error:^(RCErrorCode status) {

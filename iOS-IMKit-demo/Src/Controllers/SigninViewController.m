@@ -518,18 +518,16 @@
             //----为刘备or吕蒙不同环境预留。----//
             typeof(self) __weak weakSelf = self;
             
-            //使用DEMO注意：更换appkey，一定要更换对应的连接token，如果token未做变化，默认会从融云测试环境获取，照成appkey和token不一致
+            //使用DEMO注意：更换appkey，一定要更换对应的连接token，如果token未做变化，默认会从融云测试环境获取，造成appkey和token不一致
             [RCIM connectWithToken:loginToken completion:^(NSString *userId) {
                 
-                
-                
                 [MMProgressHUD dismissWithSuccess:@"登录成功!"];
-                
                 
                 HomeViewController *temp = [[HomeViewController alloc]init];
                 temp.currentUserId=userId;
                 
                 [weakSelf.navigationController pushViewController:temp animated:YES];
+                
             } error:^(RCConnectErrorCode status) {
                 if(status == 0)
                 {
@@ -617,6 +615,7 @@
 #pragma mark - RCIMUserInfoFetcherDelegagte method
 -(void)getUserInfoWithUserId:(NSString *)userId completion:(void(^)(RCUserInfo* userInfo))completion
 {
+
     RCUserInfo *user  = nil;
     if([userId length] == 0)
         return completion(nil);
@@ -625,6 +624,7 @@
         if([u.userId isEqualToString:userId])
         {
             user = u;
+            u.portraitUri = nil;
             break;
         }
     }
