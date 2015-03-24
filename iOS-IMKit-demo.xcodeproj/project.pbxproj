@@ -55,8 +55,6 @@
 		E2AA6B8B1A11B9A1009C8766 /* DemoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AA6B891A11B9A1009C8766 /* DemoLocationViewController.m */; };
 		E2ADF8B51A11B5DC00CCB268 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2ADF8B41A11B5DC00CCB268 /* libz.dylib */; };
 		E41FBB4E1A652EA600339B66 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E41FBB4D1A652EA600339B66 /* libsqlite3.0.dylib */; };
-		E42A2DF91AAECD2600F4C3AB /* libiOS_IMKit_v1_4_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A2DF71AAECD2600F4C3AB /* libiOS_IMKit_v1_4_1.a */; };
-		E42A2DFA1AAECD2600F4C3AB /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E42A2DF81AAECD2600F4C3AB /* RongCloud.bundle */; };
 		E4378CCD1A00C5C200612A3F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4378CCC1A00C5C200612A3F /* MapKit.framework */; };
 		E44090791AA94852006A2F31 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E44090781AA94852006A2F31 /* libxml2.dylib */; };
 		E44534C919F7A39D003A1BEE /* RongCloud-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E44534CC19F7A39D003A1BEE /* RongCloud-Info.plist */; };
@@ -148,47 +146,6 @@
 		E2AA6B891A11B9A1009C8766 /* DemoLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoLocationViewController.m; sourceTree = "<group>"; };
 		E2ADF8B41A11B5DC00CCB268 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E41FBB4D1A652EA600339B66 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		E42A2DD01AAECD2600F4C3AB /* AmrDataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmrDataConverter.h; sourceTree = "<group>"; };
-		E42A2DD11AAECD2600F4C3AB /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		E42A2DD21AAECD2600F4C3AB /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		E42A2DD31AAECD2600F4C3AB /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		E42A2DD41AAECD2600F4C3AB /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		E42A2DD51AAECD2600F4C3AB /* RCBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBasicViewController.h; sourceTree = "<group>"; };
-		E42A2DD61AAECD2600F4C3AB /* RCChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatListViewController.h; sourceTree = "<group>"; };
-		E42A2DD71AAECD2600F4C3AB /* RCChatSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatSettingViewController.h; sourceTree = "<group>"; };
-		E42A2DD81AAECD2600F4C3AB /* RCChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatViewController.h; sourceTree = "<group>"; };
-		E42A2DD91AAECD2600F4C3AB /* RCClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCClientDelegate.h; sourceTree = "<group>"; };
-		E42A2DDA1AAECD2600F4C3AB /* RCCommandNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCommandNotificationMessage.h; sourceTree = "<group>"; };
-		E42A2DDB1AAECD2600F4C3AB /* RCContactNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCContactNotificationMessage.h; sourceTree = "<group>"; };
-		E42A2DDC1AAECD2600F4C3AB /* RCConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCConversation.h; sourceTree = "<group>"; };
-		E42A2DDD1AAECD2600F4C3AB /* RCDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussion.h; sourceTree = "<group>"; };
-		E42A2DDE1AAECD2600F4C3AB /* RCDiscussionNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussionNotification.h; sourceTree = "<group>"; };
-		E42A2DDF1AAECD2600F4C3AB /* RCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroup.h; sourceTree = "<group>"; };
-		E42A2DE01AAECD2600F4C3AB /* RCGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroupListViewController.h; sourceTree = "<group>"; };
-		E42A2DE11AAECD2600F4C3AB /* RCHandShakeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHandShakeMessage.h; sourceTree = "<group>"; };
-		E42A2DE21AAECD2600F4C3AB /* RCIM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIM.h; sourceTree = "<group>"; };
-		E42A2DE31AAECD2600F4C3AB /* RCImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCImageMessage.h; sourceTree = "<group>"; };
-		E42A2DE41AAECD2600F4C3AB /* RCIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClient.h; sourceTree = "<group>"; };
-		E42A2DE51AAECD2600F4C3AB /* RCIMClientHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClientHeader.h; sourceTree = "<group>"; };
-		E42A2DE61AAECD2600F4C3AB /* RCLocationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationMessage.h; sourceTree = "<group>"; };
-		E42A2DE71AAECD2600F4C3AB /* RCLocationPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationPickerViewController.h; sourceTree = "<group>"; };
-		E42A2DE81AAECD2600F4C3AB /* RCLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationViewController.h; sourceTree = "<group>"; };
-		E42A2DE91AAECD2600F4C3AB /* RCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessage.h; sourceTree = "<group>"; };
-		E42A2DEA1AAECD2600F4C3AB /* RCMessageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessageContent.h; sourceTree = "<group>"; };
-		E42A2DEB1AAECD2600F4C3AB /* RCNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNotificationMessage.h; sourceTree = "<group>"; };
-		E42A2DEC1AAECD2600F4C3AB /* RCPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCPreviewViewController.h; sourceTree = "<group>"; };
-		E42A2DED1AAECD2600F4C3AB /* RCProfileNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCProfileNotificationMessage.h; sourceTree = "<group>"; };
-		E42A2DEE1AAECD2600F4C3AB /* RCRenameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRenameViewController.h; sourceTree = "<group>"; };
-		E42A2DEF1AAECD2600F4C3AB /* RCRichContentMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRichContentMessage.h; sourceTree = "<group>"; };
-		E42A2DF01AAECD2600F4C3AB /* RCSelectPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSelectPersonViewController.h; sourceTree = "<group>"; };
-		E42A2DF11AAECD2600F4C3AB /* RCStatusDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusDefine.h; sourceTree = "<group>"; };
-		E42A2DF21AAECD2600F4C3AB /* RCStatusMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusMessage.h; sourceTree = "<group>"; };
-		E42A2DF31AAECD2600F4C3AB /* RCTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTextMessage.h; sourceTree = "<group>"; };
-		E42A2DF41AAECD2600F4C3AB /* RCThemeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCThemeDefine.h; sourceTree = "<group>"; };
-		E42A2DF51AAECD2600F4C3AB /* RCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserInfo.h; sourceTree = "<group>"; };
-		E42A2DF61AAECD2600F4C3AB /* RCVoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCVoiceMessage.h; sourceTree = "<group>"; };
-		E42A2DF71AAECD2600F4C3AB /* libiOS_IMKit_v1_4_1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOS_IMKit_v1_4_1.a; sourceTree = "<group>"; };
-		E42A2DF81AAECD2600F4C3AB /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
 		E4378CCC1A00C5C200612A3F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E44090781AA94852006A2F31 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		E44534CB19F7A39D003A1BEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = "en.lproj/RongCloud-Info.plist"; sourceTree = "<group>"; };
@@ -274,7 +231,6 @@
 				E41FBB4E1A652EA600339B66 /* libsqlite3.0.dylib in Frameworks */,
 				E2ADF8B51A11B5DC00CCB268 /* libz.dylib in Frameworks */,
 				E28A4AD01A0C5EC800E6099D /* CoreLocation.framework in Frameworks */,
-				E42A2DF91AAECD2600F4C3AB /* libiOS_IMKit_v1_4_1.a in Frameworks */,
 				E44F4F831A664DF800E9B8CF /* libbaidumapapi.a in Frameworks */,
 				E4378CCD1A00C5C200612A3F /* MapKit.framework in Frameworks */,
 				51C2B27E19D92B3D003FD466 /* Security.framework in Frameworks */,
@@ -300,15 +256,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		51317D941A75DD8900955432 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				E42A2DCE1AAECD2600F4C3AB /* iOS_IMKit */,
-			);
-			name = Libs;
-			path = "iOS-IMKit-demo/Libs";
-			sourceTree = SOURCE_ROOT;
-		};
 		B23DC78D1942D8CB009D9E1B /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +295,6 @@
 			isa = PBXGroup;
 			children = (
 				E44090781AA94852006A2F31 /* libxml2.dylib */,
-				51317D941A75DD8900955432 /* Libs */,
 				E41FBB4D1A652EA600339B66 /* libsqlite3.0.dylib */,
 				E2ADF8B41A11B5DC00CCB268 /* libz.dylib */,
 				E28A4ACF1A0C5EC800E6099D /* CoreLocation.framework */,
@@ -488,62 +434,6 @@
 				B2FF1155196152380058A1F1 /* MMVectorImage.m */,
 			);
 			path = MMProgressHUD;
-			sourceTree = "<group>";
-		};
-		E42A2DCE1AAECD2600F4C3AB /* iOS_IMKit */ = {
-			isa = PBXGroup;
-			children = (
-				E42A2DCF1AAECD2600F4C3AB /* Headers */,
-				E42A2DF71AAECD2600F4C3AB /* libiOS_IMKit_v1_4_1.a */,
-				E42A2DF81AAECD2600F4C3AB /* RongCloud.bundle */,
-			);
-			path = iOS_IMKit;
-			sourceTree = "<group>";
-		};
-		E42A2DCF1AAECD2600F4C3AB /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				E42A2DD01AAECD2600F4C3AB /* AmrDataConverter.h */,
-				E42A2DD11AAECD2600F4C3AB /* dec_if.h */,
-				E42A2DD21AAECD2600F4C3AB /* if_rom.h */,
-				E42A2DD31AAECD2600F4C3AB /* interf_dec.h */,
-				E42A2DD41AAECD2600F4C3AB /* interf_enc.h */,
-				E42A2DD51AAECD2600F4C3AB /* RCBasicViewController.h */,
-				E42A2DD61AAECD2600F4C3AB /* RCChatListViewController.h */,
-				E42A2DD71AAECD2600F4C3AB /* RCChatSettingViewController.h */,
-				E42A2DD81AAECD2600F4C3AB /* RCChatViewController.h */,
-				E42A2DD91AAECD2600F4C3AB /* RCClientDelegate.h */,
-				E42A2DDA1AAECD2600F4C3AB /* RCCommandNotificationMessage.h */,
-				E42A2DDB1AAECD2600F4C3AB /* RCContactNotificationMessage.h */,
-				E42A2DDC1AAECD2600F4C3AB /* RCConversation.h */,
-				E42A2DDD1AAECD2600F4C3AB /* RCDiscussion.h */,
-				E42A2DDE1AAECD2600F4C3AB /* RCDiscussionNotification.h */,
-				E42A2DDF1AAECD2600F4C3AB /* RCGroup.h */,
-				E42A2DE01AAECD2600F4C3AB /* RCGroupListViewController.h */,
-				E42A2DE11AAECD2600F4C3AB /* RCHandShakeMessage.h */,
-				E42A2DE21AAECD2600F4C3AB /* RCIM.h */,
-				E42A2DE31AAECD2600F4C3AB /* RCImageMessage.h */,
-				E42A2DE41AAECD2600F4C3AB /* RCIMClient.h */,
-				E42A2DE51AAECD2600F4C3AB /* RCIMClientHeader.h */,
-				E42A2DE61AAECD2600F4C3AB /* RCLocationMessage.h */,
-				E42A2DE71AAECD2600F4C3AB /* RCLocationPickerViewController.h */,
-				E42A2DE81AAECD2600F4C3AB /* RCLocationViewController.h */,
-				E42A2DE91AAECD2600F4C3AB /* RCMessage.h */,
-				E42A2DEA1AAECD2600F4C3AB /* RCMessageContent.h */,
-				E42A2DEB1AAECD2600F4C3AB /* RCNotificationMessage.h */,
-				E42A2DEC1AAECD2600F4C3AB /* RCPreviewViewController.h */,
-				E42A2DED1AAECD2600F4C3AB /* RCProfileNotificationMessage.h */,
-				E42A2DEE1AAECD2600F4C3AB /* RCRenameViewController.h */,
-				E42A2DEF1AAECD2600F4C3AB /* RCRichContentMessage.h */,
-				E42A2DF01AAECD2600F4C3AB /* RCSelectPersonViewController.h */,
-				E42A2DF11AAECD2600F4C3AB /* RCStatusDefine.h */,
-				E42A2DF21AAECD2600F4C3AB /* RCStatusMessage.h */,
-				E42A2DF31AAECD2600F4C3AB /* RCTextMessage.h */,
-				E42A2DF41AAECD2600F4C3AB /* RCThemeDefine.h */,
-				E42A2DF51AAECD2600F4C3AB /* RCUserInfo.h */,
-				E42A2DF61AAECD2600F4C3AB /* RCVoiceMessage.h */,
-			);
-			path = Headers;
 			sourceTree = "<group>";
 		};
 		E44F4F3D1A664DF800E9B8CF /* BaiduMap_IOSSDK_v2.5.0_Lib */ = {
@@ -711,7 +601,6 @@
 				B2309731197F52810059A6EC /* AppKeyConfig in Resources */,
 				B267E0431932E37400B5FFC3 /* InfoPlist.strings in Resources */,
 				B267E0441932E37400B5FFC3 /* Localizable.strings in Resources */,
-				E42A2DFA1AAECD2600F4C3AB /* RongCloud.bundle in Resources */,
 				E44534C919F7A39D003A1BEE /* RongCloud-Info.plist in Resources */,
 				B24014151935C44A004A8EF1 /* Images.xcassets in Resources */,
 				E44F4F841A664DF800E9B8CF /* mapapi.bundle in Resources */,
