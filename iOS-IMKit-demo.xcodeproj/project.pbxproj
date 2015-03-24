@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		511F5E4719A6014B008E8343 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511F5E4619A6014B008E8343 /* UserInfoViewController.m */; };
-		512686E619750DAF00413B5C /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 512686E519750DAF00413B5C /* RongCloud.bundle */; };
 		5128D3E719BCAB54000A504D /* DemoGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5128D3E619BCAB54000A504D /* DemoGroupListViewController.m */; };
 		51500C401A63C645007BC416 /* DemoBlacklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51500C3F1A63C645007BC416 /* DemoBlacklistViewController.m */; };
 		515C38821980D7A5006C7ED4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C38811980D7A5006C7ED4 /* HomeViewController.m */; };
@@ -70,7 +69,6 @@
 /* Begin PBXFileReference section */
 		511F5E4519A6014B008E8343 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		511F5E4619A6014B008E8343 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
-		512686E519750DAF00413B5C /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
 		5128D3E519BCAB54000A504D /* DemoGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoGroupListViewController.h; sourceTree = "<group>"; };
 		5128D3E619BCAB54000A504D /* DemoGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoGroupListViewController.m; sourceTree = "<group>"; };
 		51500C3E1A63C645007BC416 /* DemoBlacklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBlacklistViewController.h; sourceTree = "<group>"; };
@@ -343,7 +341,6 @@
 		B267DFC11932E37400B5FFC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				512686E519750DAF00413B5C /* RongCloud.bundle */,
 				B24014141935C44A004A8EF1 /* Images.xcassets */,
 				B267DFC21932E37400B5FFC3 /* InfoPlist.strings */,
 				B267DFC41932E37400B5FFC3 /* Localizable.strings */,
@@ -605,7 +602,6 @@
 				B24014151935C44A004A8EF1 /* Images.xcassets in Resources */,
 				E44F4F841A664DF800E9B8CF /* mapapi.bundle in Resources */,
 				E44F4F851A664DF800E9B8CF /* readme.txt in Resources */,
-				512686E619750DAF00413B5C /* RongCloud.bundle in Resources */,
 				516687C019FE573300DBEB6C /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
